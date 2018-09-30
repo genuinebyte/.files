@@ -1,0 +1,1 @@
+/home/genbyte/.rc/.vim
