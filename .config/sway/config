@@ -207,8 +207,8 @@ bindsym $mod+r mode "resize"
 #
 set $user $alt 
 
-bindsym $mod+$alt+f exec firefox
-
+bindsym $mod+$alt+f exec firefox	#Firefox
+bindsym $mod+$alt+c exec code		#VSCode
 #
 # Status Bar:
 #
