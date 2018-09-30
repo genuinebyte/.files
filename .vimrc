@@ -26,3 +26,6 @@ inoremap <F1> <C-o>:w<cr>
 
 " Autobracket
 inoremap { {}<Esc>i
+
+" Save as root: https://stackoverflow.com/a/7078429
+cmap w!! w !sudo tee > /dev/null %
