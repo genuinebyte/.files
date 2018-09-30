@@ -209,6 +209,7 @@ set $user $alt
 
 bindsym $mod+$alt+f exec firefox	#Firefox
 bindsym $mod+$alt+c exec code		#VSCode
+bindsym $mod+$alt+p exec keepassxc	#'p' for keePass
 #
 # Status Bar:
 #
