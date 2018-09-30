@@ -25,3 +25,8 @@ ln -sfv $DIR/.vim ~/.vim
 mkdir -p $BAKDIR/.config
 mv ~/.config/sway $BAKDIR/.config/sway
 ln -sfv $DIR/.config/sway ~/.config
+
+if [ $USER = "genbyte" ]; then
+	mv ~/.gitconfig $BAKDIR/.gitconfig
+	ln -sfv $DIR/.gitconfig ~/.gitconfig
+fi
