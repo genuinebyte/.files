@@ -14,7 +14,7 @@ export EDITOR=vim
 export HISTCONTROL=ignoredups
 
 # Bash Aliases.
-if [ -f ~./bash_aliases ]; then
+if [ -f ~/.bash_aliases ]; then
 	source ~/.bash_aliases
 fi
 
