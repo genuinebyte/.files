@@ -1,7 +1,7 @@
 [user]
 	name = genuinebyte
 	email = bja@genuinebyte.com
-	signingkey = E64FD2862E55B22C
+	signingkey = DBE9A9AD1265B98C
 
 [core]
 	editor = vim
