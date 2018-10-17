@@ -24,10 +24,16 @@ mv ~/.vim $BAKDIR/.vim
 ln -sfv $DIR/.vim ~/.vim
 
 #Cool .config
+## sway
 mkdir -p $BAKDIR/.config
 if [ -d ~/.config/sway ]; then
 	mv ~/.config/sway $BAKDIR/.config/sway
 	ln -sfv $DIR/.config/sway ~/.config
+fi
+## waybar
+if [ -d ~/.config/waybar ]; then
+	mv ~/.config/waybar $BAKDIR/.config/waybar
+	ln -sfv $DIR/.config/waybar ~/.config
 fi
 
 if [ $USER = "genbyte" ]; then

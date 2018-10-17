@@ -1,0 +1,29 @@
+ * {
+ 	border: none;
+	border-radius: 0;
+	font-family: "Font Awesome 5 Free", Roboto;
+	font-size: 12px;
+ }
+
+ window {
+ 	background: #222222;
+	border: none;
+ }
+
+ #workspaces button {
+ 	padding: 0px 2px;
+	background: transparent;
+	
+	color: #843030;
+ }
+
+ #workspaces button.focused {
+ 	background: #843030;
+	color: #222222;
+ }
+
+ #pulseaudio, #network, #cpu, #memory, #clock {
+	border-left: 1px solid #843030;
+	padding: 0px 6px 0px 5px;
+	color: #843030;
+ }
