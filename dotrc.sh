@@ -37,7 +37,7 @@ if [ -d ~/.config/waybar ]; then
 fi
 
 # Glorious git
-if [ $USER = "genbyte" ]; then
+if [ ! -f ~/.gitconfig ] && [ $USER = "genbyte" ]; then
 	mv ~/.gitconfig $BAKDIR/.gitconfig
 	### copy instead of link as to avoid singingkey entries
 	cp $DIR/.gitconfig ~/.gitconfig
