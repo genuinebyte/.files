@@ -5,9 +5,17 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='\u@\h \W$ '
+# https://stackoverflow.com/q/3058325
+function prompt_command {
+	export PS1=$(~/.bash_prompt)
+}
 
-# Give vimsome default love
+PS1='\u@\h \W$ '
+if [ -f ~/.bash_prompt ]; then
+	export PROMPT_COMMAND=prompt_command
+fi
+
+# Give vim some default love
 export EDITOR=vim
 
 # Avoid successive command duplicates in history
