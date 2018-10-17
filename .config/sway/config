@@ -207,16 +207,37 @@ bindsym $mod+r mode "resize"
 #
 set $user $alt 
 
-bindsym $mod+$alt+f exec firefox	#Firefox
-bindsym $mod+$alt+c exec code		#VSCode
-bindsym $mod+$alt+p exec keepassxc	#'p' for keePass
+bindsym $mod+$user+f exec firefox	#Firefox
+bindsym $mod+$user+c exec code		#VSCode
+bindsym $mod+$user+p exec keepassxc	#'p' for keePass
+bindsym $mod+$user+s exec "slurp | grim -g - ~/Pictures/screenshots/$(date +'%Y-%m-%d-%H%M%S.png')"
+bindsym $mod+Shift+s exec "grim ~/Pictures/screenshots/$(date +'%Y-%m-%d-%H%M%S.png')"
+
+bindsym $mod+Shift+f  exec ~/.config/sway/focus.sh
+mode "focus" {
+	bindsym $alt+1 border none
+	bindsym $alt+Shift+1 border normal
+	bindsym $mod+Escape exec ~/.config/sway/unfocus.sh
+}
+
+#
+# Style
+#
+font "Roboto Bold 10"
+
+default_border normal
+default_floating_border normal
+
+client.focused #843030 #843030 #222222 #843030 #843030 
+client.unfocused #222222 #222222 #888888 #222222 #222222 
+
 #
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
 	position top
-	status_command i3status
+	swaybar_command waybar
 }
 
 include /etc/sway/config.d/*
