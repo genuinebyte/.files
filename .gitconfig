@@ -1,14 +1,13 @@
 [user]
 	name = genuinebyte
 	email = bja@genuinebyte.com
-	signingkey = DBE9A9AD1265B98C
 
 [core]
 	editor = vim
 
 [alias]
 	st = status
-	ci = commit
+	ci = commit -S
 	br = branch
 	co = checkout
 	df = diff
