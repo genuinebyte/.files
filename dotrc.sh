@@ -36,7 +36,9 @@ if [ -d ~/.config/waybar ]; then
 	ln -sfv $DIR/.config/waybar ~/.config
 fi
 
+# Glorious git
 if [ $USER = "genbyte" ]; then
 	mv ~/.gitconfig $BAKDIR/.gitconfig
-	ln -sfv $DIR/.gitconfig ~/.gitconfig
+	### copy instead of link as to avoid singingkey entries
+	cp $DIR/.gitconfig ~/.gitconfig
 fi
