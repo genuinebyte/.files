@@ -8,6 +8,8 @@ mkdir -p $BAKDIR
 #Big bash
 mv ~/.bashrc $BAKDIR/.bashrc
 ln -sfv $DIR/.bashrc ~/.bashrc
+mv ~/.bash_prompt $BAKDIR/.bash_prompt
+ln -sfv $DIR/.bash_prompt ~/.bash_prompt
 mv ~/.bash_aliases $BAKDIR/.bash_aliases
 ln -sfv $DIR/.bash_aliases ~/.bash_aliases
 mv ~/.bash_profile $BAKDIR/.bash_profile
