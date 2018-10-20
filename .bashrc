@@ -6,14 +6,14 @@
 [[ $- != *i* ]] && return
 
 # https://stackoverflow.com/q/3058325
-function prompt_command {
-	export PS1=$(~/.bash_prompt)
-}
+#function prompt_command {
+#	export PS1=$(~/.bash_prompt)
+#}
 
-PS1='\u@\h \W$ '
-if [ -f ~/.bash_prompt ]; then
-	export PROMPT_COMMAND=prompt_command
-fi
+PS1='\u@\h \W $'
+#if [ -f ~/.bash_prompt ]; then
+#	export PROMPT_COMMAND=prompt_command
+#fi
 
 # Give vim some default love
 export EDITOR=vim
