@@ -5,10 +5,11 @@
 	font-size: 12px;
  }
 
- window {
- 	background: #222222;
-	border: none;
- }
+window {
+	background-color: #222222;
+	border-bottom: 2px solid #843030;
+	color: #843030;
+}
 
  #workspaces button {
  	padding: 0px 2px;
@@ -22,7 +23,7 @@
 	color: #222222;
  }
 
- #pulseaudio, #network, #cpu, #memory, #clock {
+#pulseaudio, #network, #cpu, #memory, #clock {
 	border-left: 1px solid #843030;
 	padding: 0px 6px 0px 5px;
 	color: #843030;
