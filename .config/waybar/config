@@ -4,13 +4,19 @@
 	"height": 25,
 	"modules-left": ["sway/workspaces"],
 	"modules-center": ["sway/window"],
-	"modules-right": ["pulseaudio", "network", "cpu", "memory", "clock"],
+	"modules-right": ["pulseaudio", "network", "battery", "cpu", "memory", "tray",  "clock"],
 	"sway/window": {
 		"max-length": 50
 	},
 	"clock": {
 		"format": "{:%H:%M}",
 		"format-alt": "{:%Y-%m-%d}"
+	},
+	"tray": {
+		"spacing": 5
+	},
+	"battery": {
+		"format": "BAT {capacity}%"
 	},
 	"cpu": {
 		"format": "CPU {}%"
