@@ -1,12 +1,12 @@
 {
 	"layer": "top",
 	"position": "top",
-	"height": 20,
+	"height": 25,
 	"modules-left": ["sway/workspaces"],
 	"modules-center": ["sway/window"],
 	"modules-right": ["pulseaudio", "network", "cpu", "memory", "clock"],
 	"sway/window": {
-		"max-length": "50"
+		"max-length": 50
 	},
 	"clock": {
 		"format": "{:%H:%M}",
