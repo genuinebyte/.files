@@ -119,7 +119,7 @@ mode "resize" {
     bindsym Right resize grow width 10px
 
     bindsym Shift+Left resize shrink width 1px
-    bindsym Shift+Down resize grow width 1px
+    bindsym Shift+Down resize grow height 1px
     bindsym Shift+Up resize shrink height 1px
     bindsym Shift+Right resize grow width 1px
 
