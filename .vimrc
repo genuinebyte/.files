@@ -36,6 +36,7 @@ inoremap <F1> <C-o>:w<cr>
 inoremap <C-w> <C-o>:w<cr>
 "## Save as root: https://stackoverflow.com/a/7078429
 cmap w!! w !sudo tee > /dev/null %
+cmap rfmt %! rustfmt
 
 "# Autobracket
 inoremap { {}<Esc>i
