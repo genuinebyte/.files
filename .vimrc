@@ -47,6 +47,9 @@ imap <C-m> <C-o><C-m>
 cmap w!! w !sudo tee > /dev/null %
 cmap x!! x !sudo tee > /dev/null %
 
+"## rustfmt shortcut
+cmap rfmt %! rustfmt
+
 "# Autobracket
 "inoremap { {}<Esc>i
 
