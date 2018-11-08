@@ -20,7 +20,7 @@ set fileformats=unix,dos	" unix linebraks in new files
 "## Color 80 and everything past 100: https://vi.stackexchange.com/a/375
 let &colorcolumn="80,".join(range(100,999),",")
 set linebreak				" linebrak on 'bondaries'
-"//set textwidth=80			" wrap after 80col
+"set textwidth=80			" wrap after 80col
 
 "# user interface
 syntax on					" syntax highlighy
@@ -32,11 +32,21 @@ set ruler					" show cursor pos always
 set cursorline				" highlight current line
 
 "# shorcuts
-inoremap <F1> <C-o>:w<cr>
-inoremap <C-w> <C-o>:w<cr>
+map <C-w> :w<cr>
+imap <C-w> <C-o><C-w>
+
+"## Tabs
+map <C-b> :tabp<cr>
+imap <C-b> <C-o><C-b>
+map <C-n> :tabe<Space>
+imap <C-n> <C-o><C-n>
+map <C-m> :tabn<cr>
+imap <C-m> <C-o><C-m>
+
 "## Save as root: https://stackoverflow.com/a/7078429
 cmap w!! w !sudo tee > /dev/null %
+cmap x!! x !sudo tee > /dev/null %
 
 "# Autobracket
-inoremap { {}<Esc>i
+"inoremap { {}<Esc>i
 
