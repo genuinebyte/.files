@@ -36,12 +36,12 @@ map <C-w> :w<cr>
 imap <C-w> <C-o><C-w>
 
 "## Tabs
-map <C-b> :tabp<cr>
-imap <C-b> <C-o><C-b>
-map <C-n> :tabe<Space>
-imap <C-n> <C-o><C-n>
-map <C-m> :tabn<cr>
-imap <C-m> <C-o><C-m>
+map <C-x> :tabp<cr>
+imap <C-x> <C-o><C-x>
+map <C-c> :tabe<Space>
+imap <C-c> <C-o><C-c>
+map <C-v> :tabn<cr>
+imap <C-v> <C-o><C-v>
 
 "## Save as root: https://stackoverflow.com/a/7078429
 cmap w!! w !sudo tee > /dev/null %
