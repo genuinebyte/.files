@@ -7,13 +7,13 @@
 set autoindent				" keep indentation
 set tabstop=4				" tabs are four wide
 "## rustfmt forces spaces (so does yaml)
-" one tab = 4 spaces (auto)
-" one tab = 4 spaces (key)
-" never use hard tabs
-" only indent to multiples of shiftwidth
-" Do the right thing when shiftwidth/softtabstop diverge
+" [sw]         one tab = N spaces (auto)
+" [sts]        one tab = N spaces (key)
+" [expandtab ] never use hard tabs
+" [shiftround] only indent to multiples of shiftwidth
+" [smarttab]   Do the right thing when shiftwidth/softtabstop diverge
 autocmd FileType rust setlocal sw=4 sts=4 expandtab shiftround smarttab
-autocmd FileType yaml setlocal sw=4 sts=4 expandtab shiftround smarttab
+autocmd FileType yaml setlocal sw=2 sts=2 expandtab shiftround smarttab
 
 set fileformats=unix,dos	" unix linebraks in new files
 
