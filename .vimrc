@@ -14,6 +14,7 @@ set tabstop=4				" tabs are four wide
 " [smarttab]   Do the right thing when shiftwidth/softtabstop diverge
 autocmd FileType rust setlocal sw=4 sts=4 expandtab shiftround smarttab
 autocmd FileType yaml setlocal sw=2 sts=2 expandtab shiftround smarttab
+autocmd FileType gitcommit let &colorcolumn="50,72"
 
 set fileformats=unix,dos	" unix linebraks in new files
 
