@@ -6,6 +6,7 @@
 "# whitespace
 set autoindent				" keep indentation
 set tabstop=4				" tabs are four wide
+set shiftwidth=4			" shift is four wide
 "## rustfmt forces spaces (so does yaml)
 " [sw]         one tab = N spaces (auto)
 " [sts]        one tab = N spaces (key)
