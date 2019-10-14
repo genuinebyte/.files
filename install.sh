@@ -26,6 +26,14 @@ ln -sf $location/.vimrc ~/.vimrc
 trybackup ~/.vim
 ln -sf $location/.vim ~/.vim
 
+# Sway
+trybackup ~/.config/sway
+ln -sf $location/.config/sway ~/.config/sway
+
+# Waybar
+trybackup ~/.config/waybar
+ln -sf $location/.config/waybar ~/.config/waybar
+
 # Git
 # Don't copy is .gitconfig is already present
 if not test -e ~/.gitconfig; test $USER = "genbyte"
