@@ -16,6 +16,7 @@ set shiftwidth=4			" shift is four wide
 autocmd FileType rust setlocal sw=4 sts=4 expandtab shiftround smarttab
 autocmd FileType yaml setlocal sw=2 sts=2 expandtab shiftround smarttab
 autocmd FileType gitcommit let &colorcolumn="50,72"
+autocmd FileType markdown set spell spelllang=en_us
 
 set fileformats=unix,dos	" unix linebraks in new files
 

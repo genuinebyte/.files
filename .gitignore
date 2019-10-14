@@ -1,3 +1,4 @@
 backup
 .config/sway/sway.log
 master
+.vim/spell
