@@ -6,16 +6,15 @@
 }
  
 window {
-	background-color: #222222;
-	border-bottom: 2px solid #843030;
-	color: #843030;
+	background-color: #000000;
+	color: #EEEEEE;
 }
 
 #workspaces button {
  	padding: 0px 2px;
 	background: transparent;
 	
-	color: #843030;
+	color: #EEEEEE;
 }
 
 /* https://github.com/Alexays/Waybar/issues/60 */
@@ -25,12 +24,12 @@ window {
 }
 
 #workspaces button.focused {
- 	background: #843030;
-	color: #222222;
+ 	background: #EEEEEE;
+	color: #000000;
 }
 
  #tray, #pulseaudio, #network, #battery, #cpu, #memory, #clock {
-	border-left: 1px solid #843030;
+	border-left: 1px solid #EEEEEE;
 	padding: 0px 6px 0px 5px;
-	color: #843030;
+	color: #EEEEEE;
 }

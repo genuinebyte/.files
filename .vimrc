@@ -7,6 +7,8 @@
 set autoindent				" keep indentation
 set tabstop=4				" tabs are four wide
 set shiftwidth=4			" shift is four wide
+source ~/.vim/better-whitespace.vim
+
 "## rustfmt forces spaces (so does yaml)
 " [sw]         one tab = N spaces (auto)
 " [sts]        one tab = N spaces (key)
@@ -17,6 +19,8 @@ autocmd FileType rust setlocal sw=4 sts=4 expandtab shiftround smarttab
 autocmd FileType yaml setlocal sw=2 sts=2 expandtab shiftround smarttab
 autocmd FileType gitcommit let &colorcolumn="50,72"
 autocmd FileType markdown set spell spelllang=en_us
+autocmd FileType markdown EnableWhitespace
+autocmd FileType markdown highlight ExtraWhitespace ctermbg=240
 
 set fileformats=unix,dos	" unix linebraks in new files
 

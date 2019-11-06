@@ -29,6 +29,8 @@ ln -sf $location/.vim ~/.vim
 # Sway
 trybackup ~/.config/sway
 ln -sf $location/.config/sway ~/.config/sway
+trybackup ~/.config/swaylock
+ln -sf $location/.config/swaylock ~/.config/swaylock
 
 # Waybar
 trybackup ~/.config/waybar
