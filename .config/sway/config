@@ -135,6 +135,7 @@ bindsym XF86AudioMute exec pamixer -t && pamixer --get-volume | sed 's/$/ \#FF00
 exec swayidle -w \
 	timeout 300 'swaylock -f -i $wallpaperLocation/frozen_husky.jpg.png' \
 	before-sleep 'swaylock -f -i $wallpaperLocation/frozen_husky.jpg.png'
+bindsym $mod+l exec kill -s SIGUSR1 $(pidof swayidle)
 
 ## bemenu
 bindsym $mod+d exec BEMENU_BACKEND=wayland bemenu-run -b
