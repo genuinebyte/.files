@@ -12,7 +12,7 @@ font "Noto Sans 10"
 
 #               	border 	background	text	indicator	child border
 client.focused   	#CCCCCC	#000000		#EEEEEE	#EEEEEE		#CCCCCC
-client.unfocused 	#000000	#000000		#CCCCCC	#CCCCCC		#000000 
+client.unfocused 	#000000	#000000		#CCCCCC	#CCCCCC		#000000
 
 default_border pixel 2
 smart_gaps on
@@ -33,13 +33,13 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit sway?' -b 'Yes, exit sway' 'swaymsg exit'
 
 ## Moving around:
-### or use $mod+[up|down|left|right]
+### Window focus
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-### ditto, with arrow keys
+### Window movememt
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -107,11 +107,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 ## User Keybinds
-set $user $alt 
+set $user $alt
 
-bindsym $mod+$user+f exec firefox	#Firefox
-bindsym $mod+$user+c exec code		#VSCode
-bindsym $mod+$user+p exec keepassxc	#'p' for keePass
 bindsym $mod+$user+s exec "slurp | grim -g - $screenshotLocation/$(date +'%Y-%m-%d-%H%M%S.png')"
 bindsym $mod+Shift+s exec "grim &screenshotLocation/$(date +'%Y-%m-%d-%H%M%S.png')"
 
@@ -121,21 +118,26 @@ set $brightwob /tmp/wob/brightness
 set $volwob /tmp/wob/volume
 
 ## Brightness
-exec mkfifo $brightwob & tail -f $brightwob | wob
+exec  mkfifo $brightwob & sleep 1 && tail -f $brightwob | wob
 bindsym XF86MonBrightnessUp exec light -A 5 && light -G | cut -d'.' -f1 > $brightwob
 bindsym XF86MonBrightnessDown exec light -U 5 && light -G | cut -d'.' -f1 > $brightwob
 
 ## Volume
-exec mkfifo $volwob & tail -f $volwob | wob
+exec mkfifo $volwob & sleep 1 && tail -f $volwob | wob
 bindsym XF86AudioRaiseVolume exec pamixer -i 7 && pamixer --get-volume | sed 's/$/ \#FF000000 \#FFFFFFFF/' > $volwob
 bindsym XF86AudioLowerVolume exec pamixer -d 7 && pamixer --get-volume | sed 's/$/ \#FF000000 \#FFFFFFFF/' > $volwob
-bindsym XF86AudioMute exec pamixer -t && pamixer --get-volume | sed 's/$/ \#FF000000 \#FFFF0000/' > $volwob 
+bindsym XF86AudioMute exec pamixer -t && pamixer --get-volume | sed 's/$/ \#FF000000 \#FFFF0000/' > $volwob
 
 ## Swayidle/Swaylock
-exec swayidle -w \
-	timeout 300 'swaylock -f -i $wallpaperLocation/frozen_husky.jpg.png' \
-	before-sleep 'swaylock -f -i $wallpaperLocation/frozen_husky.jpg.png'
-bindsym $mod+l exec kill -s SIGUSR1 $(pidof swayidle)
+set $swayidleStart ~/.config/sway/swayidle-start.sh $wallpaperLocation
+set $swayidleStop ~/.config/sway/swayidle-stop.sh
+set $swayidleLock ~/.config/sway/swayidle-lock.sh
+
+exec $swayidleStart
+# These keybinds only seem to work if they're executing scripts, not raw commands
+bindsym $mod+l exec $swayidleLock
+bindsym $mod+k exec $swayidleStop
+bindsym $mod+Shift+k exec $swayidleStart
 
 ## bemenu
 bindsym $mod+d exec BEMENU_BACKEND=wayland bemenu-run -b

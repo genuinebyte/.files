@@ -3,6 +3,21 @@
 " (almost all the whitespace)
 "
 
+"# Vundle Things
+"set shell=bash
+"set nocompatible
+"filetype off
+"set rtp+=~/.vim/bundle/Vundle.vim
+
+"call vundle#begin()
+
+"Plugin 'VundleVim/Vundle.vim'
+"Plugin 'https://github.com/ycm-core/YouCompleteMe'
+
+"call vundle#end()
+
+"filetype plugin indent on
+
 "# whitespace
 set autoindent				" keep indentation
 set tabstop=4				" tabs are four wide
@@ -21,6 +36,10 @@ autocmd FileType gitcommit let &colorcolumn="50,72"
 autocmd FileType markdown set spell spelllang=en_us
 autocmd FileType markdown EnableWhitespace
 autocmd FileType markdown highlight ExtraWhitespace ctermbg=240
+autocmd FileType mail set spell spelllang=en_us
+autocmd FileType mail EnableWhitespace
+autocmd FileType mail highlight ExtraWhitespace ctermbg=240
+autocmd FileType mail let &colorcolumn="72"
 
 set fileformats=unix,dos	" unix linebraks in new files
 
