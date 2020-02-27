@@ -1,14 +1,9 @@
 [user]
-	name = genuinebyte
-	email = bja@genuinebyte.com
+	name = Brad Alfirevic
+	email = brad@genbyte.dev
 
 [core]
 	editor = vim
 
 [alias]
-	st = status
-	ci = commit -S
-	br = branch
-	co = checkout
-	df = diff
 	lg = log --oneline --graph --decorate
