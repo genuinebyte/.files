@@ -1,0 +1,9 @@
+[user]
+	name = Brad Alfirevic
+	email = brad@genbyte.dev
+
+[core]
+	editor = vim
+
+[alias]
+	lg = log --oneline --graph --decorate
