@@ -2,13 +2,13 @@
 ### Variables
 set $mod Mod4
 set $alt Mod1
-set $term gnome-terminal
+set $term foot
 
-set $screenshotLocation ~/Images/screenshots
+set $screenshotLocation ~/screenshots
 set $wallpaperLocation ~/Images/wallpaper
 
 ### Output
-font "Noto Sans 10"
+font "Liberation Sans 12"
 
 #               	border 	background	text	indicator	child border
 client.focused   	#CCCCCC	#000000		#EEEEEE	#EEEEEE		#CCCCCC
@@ -20,7 +20,7 @@ gaps inner 5
 gaps outer 5
 hide_edge_borders smart
 
-output * bg $wallpaperLocation/blood_hex.jpg.png fill
+output * bg $wallpaperLocation/own/resting_head_1080p.png fill
 
 # Key bindings
 ### start a terminal
@@ -142,11 +142,16 @@ bindsym $mod+Shift+k exec $swayidleStart
 ## bemenu
 bindsym $mod+d exec BEMENU_BACKEND=wayland bemenu-run -b
 
+## Start the Mako notification daemon
+exec mako
+
 ## Status Bar
 # Read `man 5 sway-bar` for more information about this section.
 bar {
 	position top
 	swaybar_command waybar
 }
+
+for_window [app_id="imv"] floating enable
 
 include /etc/sway/config.d/*
